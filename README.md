@@ -38,3 +38,9 @@ https://nodejs.org/en/download/
 sudo npm install -g ganache-cli // Linux / MacOS
 npm install -g ganache-cli // Windows
 ```
+
+### Install MetaMask
+
+- https://metamask.io/
+- http://faucet.ropsten.be:3001/ (Ethereum Ropsten Faucet)
+
