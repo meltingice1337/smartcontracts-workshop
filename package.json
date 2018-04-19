@@ -1,0 +1,23 @@
+{
+  "name": "smartcontracts-workshop",
+  "version": "1.0.0",
+  "description": "install brew if not already installed\r ```\r ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"\r ```\r then\r ```\r brew install node\r ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meltingice1337/smartcontracts-workshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meltingice1337/smartcontracts-workshop/issues"
+  },
+  "homepage": "https://github.com/meltingice1337/smartcontracts-workshop#readme",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "web3": "github:ethereum/web3.js"
+  }
+}

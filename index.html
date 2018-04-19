@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ethereum Web3.JS Example</title>
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script>
+        if (typeof web3 !== 'undefined') {
+            web3 = new Web3(web3.currentProvider);
+        } else {
+            web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'))
+        }
+
+        web3.eth.defaultAccount = web3.eth.accounts[0];
+        const Greeter = web3.eth.contract([{ "constant": false, "inputs": [{ "name": "_greeting", "type": "string" }], "name": "setGreeting", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "name": "_greeting", "type": "string" }], "payable": false, "stateMutability": "nonpayable", "type": "constructor" }, { "constant": true, "inputs": [], "name": "greet", "outputs": [{ "name": "", "type": "string" }], "payable": false, "stateMutability": "view", "type": "function" }]);
+        const Greeter = GreeterContract.at('0x5a7e8dae9bf002e2389d2b41c00ac4f23b5456b5');
+        Greeter.greet((e, v) => console.log(v));
+        Greeter.methods.setGreeting('test').send()
+            .on('confirmation', function (confirmationNumber, receipt) {
+                console.log(confirmationNumber, receipt)
+            })
+        Greeter.greet((e, v) => console.log(v));
+    </script>
+</body>
+
+</html>
