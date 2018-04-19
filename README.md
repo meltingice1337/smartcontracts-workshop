@@ -33,3 +33,8 @@ nodejs -v
 ##### Windows
 https://nodejs.org/en/download/
 
+### Install Ganache-CLI
+```
+sudo npm install -g ganache-cli // Linux / MacOS
+npm install -g ganache-cli // Windows
+```
