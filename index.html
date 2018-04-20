@@ -9,9 +9,11 @@
 </head>
 
 <body>
-    <div class="container">
-
-    </div>
+    <!-- <div class="container" style="display: none;">
+        <p>New event</p>
+        <p id="greet"></p>
+        <p id="sender"></p>
+    </div> -->
 
     <script src="./node_modules/web3/dist/web3.min.js"></script>
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
@@ -23,15 +25,10 @@
             web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'))
         }
 
-        web3.eth.defaultAccount = web3.eth.accounts[0];
-        const Greeter = web3.eth.contract([{ "constant": false, "inputs": [{ "name": "_greeting", "type": "string" }], "name": "setGreeting", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "name": "_greeting", "type": "string" }], "payable": false, "stateMutability": "nonpayable", "type": "constructor" }, { "constant": true, "inputs": [], "name": "greet", "outputs": [{ "name": "", "type": "string" }], "payable": false, "stateMutability": "view", "type": "function" }]);
-        const Greeter = GreeterContract.at('0x5a7e8dae9bf002e2389d2b41c00ac4f23b5456b5');
-        Greeter.greet((e, v) => console.log(v));
-        Greeter.methods.setGreeting('test').send()
-            .on('confirmation', function (confirmationNumber, receipt) {
-                console.log(confirmationNumber, receipt)
-            })
-        Greeter.greet((e, v) => console.log(v));
+        // web3.eth.defaultAccount = web3.eth.accounts[0];
+        // const GreeterContract = web3.eth.contract();
+        // const Greeter = GreeterContract.at();
+
     </script>
 </body>
 
