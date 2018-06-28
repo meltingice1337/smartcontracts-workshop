@@ -1,7 +1,5 @@
 import Web3 from 'web3';
-import {
-    soliditySha3
-} from 'web3-utils';
+import { soliditySha3 } from 'web3-utils';
 const abi = require('./abi.json');
 
 let web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
