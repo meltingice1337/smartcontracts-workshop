@@ -1,0 +1,59 @@
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "ticketNumber",
+				"type": "int16"
+			}
+		],
+		"name": "enterTicket",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "runLottery",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint16"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint16"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "ticketNumberToPlayers",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
